@@ -1,0 +1,2038 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mona Ibrahim | Medical Laboratory Specialist</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Cairo:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #0d9488;
+        --primary-dark: #0f766e;
+        --primary-light: #5eead4;
+        --accent: #06b6d4;
+        --gold: #f59e0b;
+        --navy: #0f172a;
+        --navy-light: #1e293b;
+        --bg: #f8fafc;
+        --bg-alt: #f1f5f9;
+        --text: #334155;
+        --text-light: #94a3b8;
+        --card-bg: #ffffff;
+        --card-border: rgba(0, 0, 0, 0.04);
+        --card-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+        --card-shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.1);
+        --gradient: linear-gradient(
+          135deg,
+          #0d9488 0%,
+          #06b6d4 50%,
+          #0891b2 100%
+        );
+        --nav-bg: rgba(15, 23, 42, 0.85);
+        --nav-bg-scroll: rgba(15, 23, 42, 0.95);
+        --section-label-bg: rgba(13, 148, 136, 0.1);
+        --skill-tag-bg: rgba(13, 148, 136, 0.08);
+        --skill-tag-border: rgba(13, 148, 136, 0.1);
+        --soft-tag-bg: rgba(245, 158, 11, 0.08);
+        --soft-tag-border: rgba(245, 158, 11, 0.15);
+        --cert-icon-bg: rgba(13, 148, 136, 0.1);
+        --about-icon-bg: rgba(13, 148, 136, 0.1);
+        --lang-circle-track: #e2e8f0;
+        --date-bg: rgba(13, 148, 136, 0.1);
+        --timeline-border: #e2e8f0;
+        --edu-grade-bg: rgba(245, 158, 11, 0.1);
+        --footer-bg: #0f172a;
+        --footer-text: rgba(255, 255, 255, 0.4);
+        --footer-icon-bg: rgba(255, 255, 255, 0.05);
+        --footer-icon: rgba(255, 255, 255, 0.5);
+        --scroll-top-shadow: 0 4px 20px rgba(13, 148, 136, 0.4);
+        --toggle-bg: rgba(255, 255, 255, 0.1);
+        --toggle-border: rgba(255, 255, 255, 0.2);
+        --text-muted: #6b7280;
+        --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      [data-theme="dark"] {
+        --bg: #0f172a;
+        --bg-alt: #1e293b;
+        --text: #e2e8f0;
+        --text-light: #94a3b8;
+        --card-bg: #1e293b;
+        --card-border: rgba(255, 255, 255, 0.06);
+        --card-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        --card-shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.5);
+        --section-label-bg: rgba(13, 148, 136, 0.15);
+        --skill-tag-bg: rgba(13, 148, 136, 0.12);
+        --skill-tag-border: rgba(13, 148, 136, 0.2);
+        --soft-tag-bg: rgba(245, 158, 11, 0.12);
+        --soft-tag-border: rgba(245, 158, 11, 0.2);
+        --cert-icon-bg: rgba(13, 148, 136, 0.15);
+        --about-icon-bg: rgba(13, 148, 136, 0.15);
+        --lang-circle-track: #334155;
+        --date-bg: rgba(13, 148, 136, 0.15);
+        --timeline-border: #334155;
+        --edu-grade-bg: rgba(245, 158, 11, 0.15);
+        --footer-bg: #020617;
+        --footer-text: rgba(255, 255, 255, 0.35);
+        --footer-icon-bg: rgba(255, 255, 255, 0.06);
+        --footer-icon: rgba(255, 255, 255, 0.45);
+        --text-muted: #9ca3af;
+        --toggle-bg: rgba(255, 255, 255, 0.08);
+        --toggle-border: rgba(255, 255, 255, 0.12);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        overflow-x: hidden;
+        transition:
+          background 0.5s ease,
+          color 0.5s ease;
+      }
+      [lang="ar"] body,
+      [lang="ar"] *:not(i):not(.fas):not(.fab):not(.far):not([class*="fa-"]) {
+        font-family: "Cairo", "Inter", sans-serif;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.3s ease;
+      }
+      ::selection {
+        background: var(--primary);
+        color: #fff;
+      }
+
+      /* NAVBAR */
+      .navbar {
+        backdrop-filter: blur(20px);
+        background: var(--nav-bg) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        transition: var(--transition);
+      }
+      .navbar.scrolled {
+        background: var(--nav-bg-scroll) !important;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+      }
+      .navbar-brand {
+        font-weight: 800;
+        font-size: 1.3rem;
+        color: #fff !important;
+        letter-spacing: -0.5px;
+      }
+      .navbar-brand span {
+        color: var(--primary-light);
+      }
+      .nav-link {
+        color: rgba(255, 255, 255, 0.7) !important;
+        font-weight: 500;
+        font-size: 0.9rem;
+        transition: var(--transition);
+        padding: 8px 14px !important;
+        border-radius: 10px;
+      }
+      .nav-link:hover,
+      .nav-link.active {
+        color: #fff !important;
+        background: rgba(13, 148, 136, 0.2);
+      }
+      .theme-toggle,
+      .lang-toggle {
+        background: var(--toggle-bg);
+        border: 1px solid var(--toggle-border);
+        color: #fff;
+        padding: 8px 14px;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: var(--transition);
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        line-height: 1;
+      }
+      .theme-toggle:hover,
+      .lang-toggle:hover {
+        background: var(--primary);
+        border-color: var(--primary);
+        transform: scale(1.05);
+      }
+      .theme-toggle i,
+      .lang-toggle i {
+        font-size: 0.9rem;
+        transition: transform 0.4s ease;
+      }
+      .theme-toggle:hover i {
+        transform: rotate(180deg);
+      }
+
+      /* BUTTONS */
+      .btn-download {
+        background: var(--gradient);
+        color: #fff;
+        border: none;
+        padding: 12px 28px;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: var(--transition);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 4px 20px rgba(13, 148, 136, 0.4);
+        border: 2px solid transparent;
+      }
+      .btn-download:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(13, 148, 136, 0.5);
+        color: #fff;
+      }
+      .btn-download i {
+        transition: transform 0.3s ease;
+      }
+      .btn-download:hover i {
+        transform: translateY(3px);
+      }
+      .btn-outline-download {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        box-shadow: none;
+        color: #fff;
+      }
+      .btn-outline-download:hover {
+        background: rgba(255, 255, 255, 0.15);
+        color: #fff;
+      }
+      .btn-gold {
+        background: linear-gradient(135deg, #f59e0b, #f97316) !important;
+        box-shadow: 0 4px 20px rgba(245, 158, 11, 0.4) !important;
+      }
+      .btn-gold:hover {
+        box-shadow: 0 8px 30px rgba(245, 158, 11, 0.5) !important;
+      }
+
+      /* HERO */
+      .hero {
+        min-height: 100vh;
+        background: var(--navy);
+        position: relative;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse at 30% 50%,
+            rgba(13, 148, 136, 0.15) 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse at 70% 80%,
+            rgba(6, 182, 212, 0.1) 0%,
+            transparent 50%
+          );
+      }
+      .hero-particles {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+      .particle {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.15;
+        animation: float linear infinite;
+      }
+      @keyframes float {
+        0% {
+          transform: translateY(100vh) rotate(0deg);
+        }
+        100% {
+          transform: translateY(-10vh) rotate(720deg);
+        }
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+      }
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(13, 148, 136, 0.15);
+        border: 1px solid rgba(13, 148, 136, 0.3);
+        color: var(--primary-light);
+        padding: 8px 20px;
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-bottom: 24px;
+        animation: fadeSlideUp 0.8s ease forwards;
+        opacity: 0;
+      }
+      .hero-badge i {
+        font-size: 0.7rem;
+        animation: pulse 2s ease-in-out infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.4;
+        }
+      }
+      .hero h1 {
+        font-size: clamp(2.5rem, 6vw, 4.5rem);
+        font-weight: 900;
+        color: #fff;
+        line-height: 1.1;
+        margin-bottom: 16px;
+        animation: fadeSlideUp 0.8s ease 0.2s forwards;
+        opacity: 0;
+      }
+      .hero h1 span {
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .hero-subtitle {
+        font-size: clamp(1rem, 2vw, 1.2rem);
+        color: var(--text-light);
+        font-weight: 400;
+        margin-bottom: 40px;
+        max-width: 600px;
+        animation: fadeSlideUp 0.8s ease 0.4s forwards;
+        opacity: 0;
+        line-height: 1.7;
+      }
+      .hero-buttons {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        animation: fadeSlideUp 0.8s ease 0.6s forwards;
+        opacity: 0;
+      }
+      .hero-stats {
+        display: flex;
+        gap: 40px;
+        margin-top: 60px;
+        animation: fadeSlideUp 0.8s ease 0.8s forwards;
+        opacity: 0;
+      }
+      .hero-stat {
+        position: relative;
+      }
+      .hero-stat h3 {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: var(--primary-light);
+      }
+      .hero-stat p {
+        font-size: 0.85rem;
+        color: var(--text-light);
+        font-weight: 500;
+      }
+      .hero-stat::after {
+        content: "";
+        position: absolute;
+        right: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 30px;
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .hero-stat:last-child::after {
+        display: none;
+      }
+      .hero-image {
+        position: relative;
+        animation: fadeSlideLeft 1s ease 0.5s forwards;
+        opacity: 0;
+      }
+      .hero-image-wrapper {
+        width: 320px;
+        height: 320px;
+        border-radius: 30px;
+        background: var(--gradient);
+        padding: 4px;
+        position: relative;
+        margin-left: auto;
+      }
+      .hero-image-inner {
+        width: 100%;
+        height: 100%;
+        border-radius: 28px;
+        background: var(--navy-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+      }
+      .hero-image-inner i {
+        font-size: 8rem;
+        color: rgba(13, 148, 136, 0.3);
+        transition: transform 0.6s ease;
+      }
+      .hero-image-wrapper:hover .hero-image-inner i {
+        transform: scale(1.1) rotate(5deg);
+      }
+      .hero-image-float {
+        position: absolute;
+        background: var(--card-bg);
+        border-radius: 16px;
+        padding: 14px 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 600;
+        font-size: 0.85rem;
+        animation: bob 3s ease-in-out infinite;
+        color: var(--text);
+        z-index: 2;
+      }
+      .hero-image-float.f1 {
+        top: -10px;
+        right: -20px;
+        animation-delay: 0s;
+      }
+      .hero-image-float.f2 {
+        bottom: 20px;
+        left: -30px;
+        animation-delay: 1.5s;
+      }
+      .hero-image-float i {
+        color: var(--primary) !important;
+        font-size: 1.1rem;
+      }
+      @keyframes bob {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      @keyframes fadeSlideUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeSlideLeft {
+        from {
+          opacity: 0;
+          transform: translateX(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      /* SECTIONS */
+      .section {
+        padding: 100px 0;
+        background: var(--bg);
+        transition: background 0.5s ease;
+      }
+      .section-alt {
+        background: var(--bg-alt);
+      }
+      .section-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--section-label-bg);
+        color: var(--primary);
+        padding: 6px 16px;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 16px;
+      }
+      .section-title {
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 900;
+        color: var(--text);
+        margin-bottom: 16px;
+        line-height: 1.2;
+        transition: color 0.5s ease;
+      }
+      .section-title span {
+        color: var(--primary);
+      }
+      .section-desc {
+        font-size: 1.05rem;
+        color: var(--text-light);
+        max-width: 600px;
+        line-height: 1.7;
+      }
+
+      /* CARDS */
+      .about-card,
+      .skill-card,
+      .edu-card,
+      .cert-card,
+      .lang-card,
+      .contact-card,
+      .timeline-item {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        box-shadow: var(--card-shadow);
+        transition: var(--transition);
+      }
+      .about-card {
+        border-radius: 24px;
+        padding: 40px;
+      }
+      .about-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--card-shadow-hover);
+      }
+      .about-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 16px;
+        background: var(--about-icon-bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        transition: var(--transition);
+      }
+      .about-card:hover .about-icon {
+        transform: scale(1.1) rotate(5deg);
+      }
+      .about-icon i {
+        font-size: 1.4rem;
+        color: var(--primary);
+      }
+      .about-card h4 {
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 10px;
+      }
+      .about-card p {
+        color: var(--text-light);
+        font-size: 0.9rem;
+        line-height: 1.7;
+      }
+
+      .skill-card {
+        border-radius: 20px;
+        padding: 30px;
+        height: 100%;
+      }
+      .skill-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--card-shadow-hover);
+      }
+      .skill-card .icon-wrap {
+        width: 50px;
+        height: 50px;
+        border-radius: 14px;
+        background: var(--gradient);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+        transition: var(--transition);
+      }
+      .skill-card:hover .icon-wrap {
+        transform: scale(1.1) rotate(-5deg);
+      }
+      .skill-card .icon-wrap i {
+        color: #fff;
+        font-size: 1.1rem;
+      }
+      .skill-card h5 {
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 8px;
+        font-size: 1rem;
+      }
+
+      .skill-tag {
+        display: inline-block;
+        background: var(--skill-tag-bg);
+        color: var(--primary-dark);
+        padding: 8px 18px;
+        border-radius: 12px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin: 4px;
+        transition: var(--transition);
+        border: 1px solid var(--skill-tag-border);
+        cursor: default;
+      }
+      .skill-tag:hover {
+        background: var(--primary);
+        color: #fff;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 15px rgba(13, 148, 136, 0.3);
+      }
+      .skill-tag.soft {
+        background: var(--soft-tag-bg);
+        color: #b45309;
+        border-color: var(--soft-tag-border);
+      }
+      .skill-tag.soft:hover {
+        background: var(--gold);
+        color: #fff;
+      }
+
+      /* TIMELINE */
+      .timeline {
+        position: relative;
+        padding-left: 40px;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 15px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(
+          to bottom,
+          var(--primary),
+          var(--accent),
+          var(--primary-light)
+        );
+      }
+      .timeline-item {
+        position: relative;
+        margin-bottom: 40px;
+        padding: 28px 30px;
+        border-radius: 20px;
+      }
+      .timeline-item:hover {
+        transform: translateX(8px);
+        box-shadow: var(--card-shadow-hover);
+      }
+      .timeline-dot {
+        position: absolute;
+        left: -33px;
+        top: 30px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--primary);
+        border: 3px solid var(--bg);
+        box-shadow: 0 0 0 3px var(--primary);
+        transition: border-color 0.5s ease;
+      }
+      .timeline-item .date {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--date-bg);
+        color: var(--primary);
+        padding: 4px 14px;
+        border-radius: 8px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+      .timeline-item h4 {
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 4px;
+        font-size: 1.1rem;
+      }
+      .timeline-item h5 {
+        font-weight: 600;
+        color: var(--primary);
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+      }
+      .timeline-item p {
+        color: var(--text-light);
+        font-size: 0.88rem;
+        line-height: 1.7;
+        margin: 0;
+      }
+      .timeline-item small {
+        color: var(--text-muted);
+      }
+
+      /* EDUCATION */
+      .edu-card {
+        border-radius: 24px;
+        padding: 40px;
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+      }
+      .edu-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--card-shadow-hover);
+      }
+      .edu-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 200px;
+        background: var(--gradient);
+        opacity: 0.05;
+        border-radius: 0 0 0 100%;
+      }
+      .edu-card .icon-big {
+        width: 80px;
+        height: 80px;
+        border-radius: 20px;
+        background: var(--gradient);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 24px;
+        transition: var(--transition);
+      }
+      .edu-card:hover .icon-big {
+        transform: scale(1.1) rotate(-5deg);
+      }
+      .edu-card .icon-big i {
+        color: #fff;
+        font-size: 2rem;
+      }
+      .edu-card h4 {
+        font-weight: 800;
+        color: var(--text);
+        margin-bottom: 8px;
+      }
+      .edu-card h5 {
+        color: var(--primary);
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+      .edu-card p {
+        color: var(--text-light);
+        font-size: 0.9rem;
+      }
+      .edu-grade {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--edu-grade-bg);
+        color: #b45309;
+        padding: 6px 16px;
+        border-radius: 10px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        margin-top: 12px;
+      }
+
+      /* CERTIFICATES */
+      .cert-card {
+        border-radius: 16px;
+        padding: 24px;
+        align-items: flex-start;
+      }
+      .cert-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--card-shadow-hover);
+      }
+      .cert-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+        background: var(--cert-icon-bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        transition: var(--transition);
+      }
+      .cert-card:hover .cert-icon {
+        transform: scale(1.1) rotate(-5deg);
+      }
+      .cert-icon i {
+        color: var(--primary);
+        font-size: 1.1rem;
+      }
+      .cert-card h5 {
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 4px;
+        font-size: 0.95rem;
+      }
+      .cert-card p {
+        color: var(--text-light);
+        font-size: 0.82rem;
+        margin: 0;
+      }
+
+      /* LANGUAGES */
+      .lang-card {
+        border-radius: 20px;
+        padding: 30px;
+        text-align: center;
+      }
+      .lang-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--card-shadow-hover);
+      }
+      .lang-circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 0 auto 16px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .lang-circle svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: rotate(-90deg);
+      }
+      .lang-circle .val {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--text);
+      }
+      .lang-card h5 {
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 4px;
+      }
+      .lang-card p {
+        color: var(--text-light);
+        font-size: 0.85rem;
+        margin: 0;
+      }
+      .lang-circle-track {
+        stroke: var(--lang-circle-track);
+        transition: stroke 0.5s ease;
+      }
+
+      /* CONTACT */
+      .contact-card {
+        border-radius: 20px;
+        padding: 30px;
+        text-align: center;
+      }
+      .contact-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--card-shadow-hover);
+      }
+      .contact-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 16px;
+        background: var(--gradient);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 16px;
+        transition: var(--transition);
+      }
+      .contact-card:hover .contact-icon {
+        transform: scale(1.1) rotate(-5deg);
+      }
+      .contact-icon i {
+        color: #fff;
+        font-size: 1.2rem;
+      }
+      .contact-card h5 {
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 4px;
+      }
+      .contact-card p {
+        color: var(--text-light);
+        font-size: 0.88rem;
+        margin: 0;
+        word-break: break-all;
+      }
+
+      /* FOOTER */
+      .footer {
+        background: var(--footer-bg);
+        padding: 40px 0;
+        text-align: center;
+        color: var(--footer-text);
+        font-size: 0.85rem;
+        transition: background 0.5s ease;
+      }
+      .footer a {
+        color: var(--primary-light);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      .footer a:hover {
+        color: #fff;
+      }
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 16px;
+      }
+      .footer-links a {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        background: var(--footer-icon-bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--footer-icon);
+        transition: var(--transition);
+        font-size: 1rem;
+      }
+      .footer-links a:hover {
+        background: var(--primary);
+        color: #fff;
+        transform: translateY(-3px);
+      }
+
+      /* SCROLL ANIMATIONS */
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .reveal-delay-1 {
+        transition-delay: 0.1s;
+      }
+      .reveal-delay-2 {
+        transition-delay: 0.2s;
+      }
+      .reveal-delay-3 {
+        transition-delay: 0.3s;
+      }
+      .reveal-delay-4 {
+        transition-delay: 0.4s;
+      }
+
+      /* SCROLL TOP */
+      .scroll-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        border-radius: 16px;
+        background: var(--gradient);
+        color: #fff;
+        border: none;
+        font-size: 1.1rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+        z-index: 999;
+        box-shadow: var(--scroll-top-shadow);
+      }
+      .scroll-top.show {
+        opacity: 1;
+        visibility: visible;
+      }
+      .scroll-top:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(13, 148, 136, 0.5);
+      }
+
+      /* RTL */
+      [dir="rtl"] .timeline {
+        padding-left: 0;
+        padding-right: 40px;
+      }
+      [dir="rtl"] .timeline::before {
+        left: auto;
+        right: 15px;
+      }
+      [dir="rtl"] .timeline-dot {
+        left: auto;
+        right: -33px;
+      }
+      [dir="rtl"] .timeline-item:hover {
+        transform: translateX(-8px);
+      }
+
+      /* TOAST */
+      .toast-msg {
+        position: fixed;
+        bottom: 90px;
+        right: 30px;
+        background: var(--card-bg);
+        color: var(--text);
+        border: 1px solid var(--card-border);
+        border-radius: 14px;
+        padding: 14px 22px;
+        font-size: 0.88rem;
+        font-weight: 600;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        z-index: 9999;
+        transform: translateY(20px);
+        opacity: 0;
+        transition: var(--transition);
+        pointer-events: none;
+      }
+      .toast-msg.show {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        .hero {
+          padding-top: 100px;
+        }
+        .hero-image-wrapper {
+          width: 200px;
+          height: 200px;
+          margin: 40px auto 0;
+          border-radius: 24px;
+        }
+        .hero-image-inner {
+          border-radius: 22px;
+        }
+        .hero-image-inner i {
+          font-size: 5rem;
+        }
+        .hero-stats {
+          gap: 24px;
+          flex-wrap: wrap;
+        }
+        .hero-stat::after {
+          display: none;
+        }
+        .hero-image-float {
+          display: none;
+        }
+        .navbar-collapse {
+          background: rgba(15, 23, 42, 0.97);
+          border-radius: 16px;
+          padding: 16px;
+          margin-top: 8px;
+          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+        .section {
+          padding: 60px 0;
+        }
+        .about-card,
+        .skill-card,
+        .edu-card {
+          padding: 28px;
+        }
+        .btn-download {
+          padding: 10px 22px;
+          font-size: 0.85rem;
+        }
+      }
+      @media (max-width: 480px) {
+        .hero-stats {
+          gap: 16px;
+        }
+        .hero-stat h3 {
+          font-size: 1.6rem;
+        }
+        .hero-buttons {
+          flex-direction: column;
+        }
+        .hero-buttons a {
+          text-align: center;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="#hero">Mona<span>.</span></a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navContent"
+        >
+          <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="#hero"
+                data-en="Home"
+                data-ar="الرئيسية"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about" data-en="About" data-ar="عنّي"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#skills"
+                data-en="Skills"
+                data-ar="المهارات"
+                >Skills</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#experience"
+                data-en="Experience"
+                data-ar="الخبرات"
+                >Experience</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#education"
+                data-en="Education"
+                data-ar="التعليم"
+                >Education</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#contact"
+                data-en="Contact"
+                data-ar="تواصل"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <div class="d-flex gap-2 align-items-center">
+            <button
+              class="theme-toggle"
+              id="themeBtn"
+              onclick="toggleTheme()"
+              title="Toggle Theme"
+            >
+              <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+            <button class="lang-toggle" id="langBtn" onclick="toggleLang()">
+              <i class="fas fa-globe"></i><span id="langLabel">عربي</span>
+            </button>
+            <a class="btn-download" href="cvs.zip" download="cvs.zip"
+              ><i class="fas fa-download"></i
+              ><span data-en="CV" data-ar="السيرة"> CV </span></a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-particles" id="particles"></div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7 hero-content">
+            <div class="hero-badge">
+              <i class="fas fa-circle"></i
+              ><span data-en="Available for Opportunities" data-ar="متاحة للفرص"
+                >Available for Opportunities</span
+              >
+            </div>
+            <h1
+              data-en="Mona Ibrahim<br/><span>Medical Laboratory<br/>Specialist</span>"
+              data-ar="منى إبراهيم<br/><span>أخصائية مختبرات<br/>طبية</span>"
+            >
+              Mona Ibrahim<br /><span>Medical Laboratory<br />Specialist</span>
+            </h1>
+            <p
+              class="hero-subtitle"
+              data-en="A dedicated Medical Laboratory Specialist with hands-on experience at international organizations and hospitals. Passionate about delivering accurate diagnostics and outstanding healthcare services."
+              data-ar="أخصائية مختبرات طبية متفانية، تمتلك خبرة عملية في العمل مع منظمات دولية ومستشفيات. شغوفة بتقديم تشخيصات دقيقة وخدمات صحية متميزة."
+            >
+              A dedicated Medical Laboratory Specialist with hands-on experience
+              at international organizations and hospitals. Passionate about
+              delivering accurate diagnostics and outstanding healthcare
+              services.
+            </p>
+            <div class="hero-buttons">
+              <a class="btn-download" href="#experience"
+                ><i class="fas fa-arrow-right"></i
+                ><span data-en="Explore My Work" data-ar="استكشاف أعمالي"
+                  >Explore My Work</span
+                ></a
+              >
+              <a class="btn-download btn-outline-download" href="#contact"
+                ><i class="fas fa-envelope"></i
+                ><span data-en="Get in Touch" data-ar="تواصل معي"
+                  >Get in Touch</span
+                ></a
+              >
+            </div>
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <h3>5+</h3>
+                <p data-en="Years Experience" data-ar="سنوات خبرة">
+                  Years Experience
+                </p>
+              </div>
+              <div class="hero-stat">
+                <h3>3</h3>
+                <p data-en="Workplaces" data-ar="أماكن عمل">Workplaces</p>
+              </div>
+              <div class="hero-stat">
+                <h3>6</h3>
+                <p data-en="Certificates" data-ar="شهادات">Certificates</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 d-none d-lg-block">
+            <div class="hero-image">
+              <div class="hero-image-wrapper">
+                <div class="hero-image-inner">
+                  <i class="fas fa-microscope"></i>
+                </div>
+                <div class="hero-image-float f1">
+                  <i class="fas fa-flask"></i
+                  ><span data-en="Lab Specialist" data-ar="أخصائية مختبر"
+                    >Lab Specialist</span
+                  >
+                </div>
+                <div class="hero-image-float f2">
+                  <i class="fas fa-award"></i
+                  ><span data-en="Certified" data-ar="معتمدة">Certified</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <div class="section-label">
+            <i class="fas fa-user"></i
+            ><span data-en="About Me" data-ar="عنّي">About Me</span>
+          </div>
+          <h2
+            class="section-title"
+            data-en="Passionate About <span>Precision & Care</span>"
+            data-ar="شغوفة بالدقة <span>والرعاية</span>"
+          >
+            Passionate About <span>Precision & Care</span>
+          </h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4 reveal reveal-delay-1">
+            <div class="about-card h-100">
+              <div class="about-icon"><i class="fas fa-microscope"></i></div>
+              <h4 data-en="Laboratory Expertise" data-ar="خبرة مخبرية">
+                Laboratory Expertise
+              </h4>
+              <p
+                data-en="Proficient in operating modern laboratory equipment, conducting routine and specialized tests with high precision and accuracy."
+                data-ar="براعة في تشغيل أجهزة المختبر الحديثة، إجراء الفحوصات الروتينية والمتخصصة بدقة عالية."
+              >
+                Proficient in operating modern laboratory equipment, conducting
+                routine and specialized tests with high precision and accuracy.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 reveal reveal-delay-2">
+            <div class="about-card h-100">
+              <div class="about-icon"><i class="fas fa-globe"></i></div>
+              <h4 data-en="International Experience" data-ar="خبرة دولية">
+                International Experience
+              </h4>
+              <p
+                data-en="Worked with the International Organization for Migration (IOM) and international medical facilities, gaining valuable cross-cultural healthcare experience."
+                data-ar="عملت مع المنظمة الدولية للهجرة ومنشآت طبية دولية، مما منحني خبرة طبية ثقافية قيّمة."
+              >
+                Worked with the International Organization for Migration (IOM)
+                and international medical facilities, gaining valuable
+                cross-cultural healthcare experience.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 reveal reveal-delay-3">
+            <div class="about-card h-100">
+              <div class="about-icon"><i class="fas fa-heart-pulse"></i></div>
+              <h4 data-en="Patient Focused" data-ar="مركّزة على المريض">
+                Patient Focused
+              </h4>
+              <p
+                data-en="Strong communication skills with both medical teams and patients. Committed to delivering outstanding healthcare services and improving quality of life."
+                data-ar="مهارات تواصل قوية مع الفرق الطبية والمرضى. ملتزمة بتقديم خدمات صحية متميزة وتحسين جودة الحياة."
+              >
+                Strong communication skills with both medical teams and
+                patients. Committed to delivering outstanding healthcare
+                services and improving quality of life.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <div class="section-label">
+            <i class="fas fa-cogs"></i
+            ><span data-en="My Skills" data-ar="مهاراتي">My Skills</span>
+          </div>
+          <h2
+            class="section-title"
+            data-en="Technical & <span>Professional Skills</span>"
+            data-ar="المهارات <span>الفنية والمهنية</span>"
+          >
+            Technical & <span>Professional Skills</span>
+          </h2>
+        </div>
+        <div class="row g-4 mb-5">
+          <div class="col-lg-6 reveal">
+            <div class="skill-card h-100">
+              <div class="icon-wrap"><i class="fas fa-flask-vial"></i></div>
+              <h5
+                data-en="Technical Laboratory Skills"
+                data-ar="المهارات المخبرية الفنية"
+              >
+                Technical Laboratory Skills
+              </h5>
+              <div class="mt-3">
+                <span
+                  class="skill-tag"
+                  data-en="Blood Tests"
+                  data-ar="الفحوصات الدموية"
+                  >Blood Tests</span
+                >
+                <span
+                  class="skill-tag"
+                  data-en="Clinical Chemistry"
+                  data-ar="الكيمياء السريرية"
+                  >Clinical Chemistry</span
+                >
+                <span
+                  class="skill-tag"
+                  data-en="Microbiology"
+                  data-ar="الأحياء الدقيقة"
+                  >Microbiology</span
+                >
+                <span class="skill-tag" data-en="Immunology" data-ar="المناعة"
+                  >Immunology</span
+                >
+                <span
+                  class="skill-tag"
+                  data-en="Sample Collection"
+                  data-ar="سحب العينات"
+                  >Sample Collection</span
+                >
+                <span
+                  class="skill-tag"
+                  data-en="Quality Control"
+                  data-ar="ضبط الجودة"
+                  >Quality Control</span
+                >
+                <span
+                  class="skill-tag"
+                  data-en="Equipment Maintenance"
+                  data-ar="صيانة الأجهزة"
+                  >Equipment Maintenance</span
+                >
+                <span
+                  class="skill-tag"
+                  data-en="Lab Documentation"
+                  data-ar="التوثيق المخبري"
+                  >Lab Documentation</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 reveal reveal-delay-1">
+            <div class="skill-card h-100">
+              <div
+                class="icon-wrap"
+                style="background: linear-gradient(135deg, #f59e0b, #f97316)"
+              >
+                <i class="fas fa-brain"></i>
+              </div>
+              <h5
+                data-en="Soft Skills & Attributes"
+                data-ar="المهارات الشخصية والسمات"
+              >
+                Soft Skills & Attributes
+              </h5>
+              <div class="mt-3">
+                <span
+                  class="skill-tag soft"
+                  data-en="Teamwork"
+                  data-ar="العمل ضمن فريق"
+                  >Teamwork</span
+                >
+                <span
+                  class="skill-tag soft"
+                  data-en="Quality Improvement"
+                  data-ar="تحسين الجودة"
+                  >Quality Improvement</span
+                >
+                <span
+                  class="skill-tag soft"
+                  data-en="Precision in Work"
+                  data-ar="الدقة في العمل"
+                  >Precision in Work</span
+                >
+                <span
+                  class="skill-tag soft"
+                  data-en="Communication Skills"
+                  data-ar="مهارات تواصل"
+                  >Communication Skills</span
+                >
+                <span
+                  class="skill-tag soft"
+                  data-en="Working Under Pressure"
+                  data-ar="العمل تحت الضغط"
+                  >Working Under Pressure</span
+                >
+                <span
+                  class="skill-tag soft"
+                  data-en="Time Management"
+                  data-ar="تنظيم الوقت"
+                  >Time Management</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 reveal reveal-delay-2">
+            <div class="lang-card h-100">
+              <div class="lang-circle">
+                <svg width="100" height="100">
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="45"
+                    fill="none"
+                    class="lang-circle-track"
+                    stroke-width="6"
+                  />
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="45"
+                    fill="none"
+                    stroke="url(#grad1)"
+                    stroke-width="6"
+                    stroke-dasharray="283"
+                    stroke-dashoffset="0"
+                    stroke-linecap="round"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="grad1"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="0%"
+                    >
+                      <stop offset="0%" style="stop-color: #0d9488" />
+                      <stop offset="100%" style="stop-color: #06b6d4" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <span class="val">100%</span>
+              </div>
+              <h5 data-en="Arabic" data-ar="العربية">Arabic</h5>
+              <p data-en="Native Language" data-ar="اللغة الأم">
+                Native Language
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 reveal reveal-delay-3">
+            <div class="lang-card h-100">
+              <div class="lang-circle">
+                <svg width="100" height="100">
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="45"
+                    fill="none"
+                    class="lang-circle-track"
+                    stroke-width="6"
+                  />
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="45"
+                    fill="none"
+                    stroke="url(#grad2)"
+                    stroke-width="6"
+                    stroke-dasharray="283"
+                    stroke-dashoffset="142"
+                    stroke-linecap="round"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="grad2"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="0%"
+                    >
+                      <stop offset="0%" style="stop-color: #f59e0b" />
+                      <stop offset="100%" style="stop-color: #f97316" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <span class="val">50%</span>
+              </div>
+              <h5 data-en="English" data-ar="الإنجليزية">English</h5>
+              <p data-en="Intermediate Level" data-ar="مستوى متوسط">
+                Intermediate Level
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <div class="section-label">
+            <i class="fas fa-briefcase"></i
+            ><span data-en="Experience" data-ar="الخبرات">Experience</span>
+          </div>
+          <h2
+            class="section-title"
+            data-en="Professional <span>Work Experience</span>"
+            data-ar="الخبرات <span>العملية</span>"
+          >
+            Professional <span>Work Experience</span>
+          </h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="date">
+              <i class="fas fa-calendar"></i
+              ><span data-en="1 Year" data-ar="سنة كاملة">1 Year</span>
+            </div>
+            <h4 data-en="Laboratory Specialist" data-ar="أخصائية مختبر">
+              Laboratory Specialist
+            </h4>
+            <h5
+              data-en="Al-Rahma Dispensary — Tawasul (Kuwait)"
+              data-ar=" مستوصف الرحمة — تابع تواصل (الكويت)"
+            >
+              Al-Rahma Dispensary — Tawasul (Kuwait)
+            </h5>
+            <p
+              data-en="Conducted all routine and specialized laboratory tests. Operated modern equipment and documented results. Contributed to improving work quality and using modern equipment efficiently."
+              data-ar="إجراء جميع الفحوصات المخبرية الروتينية والمتخصصة. تشغيل الأجهزة الحديثة وتوثيق النتائج. ساهمت في تحسين جودة العمل واستخدام الأجهزة الحديثة بكفاءة."
+            >
+              Conducted all routine and specialized laboratory tests. Operated
+              modern equipment and documented results. Contributed to improving
+              work quality and using modern equipment efficiently.
+            </p>
+            <small
+              ><i class="fas fa-location-dot me-1"></i
+              ><span data-en="Al-Khokha" data-ar="الخوخة"
+                >Al-Khokha</span
+              ></small
+            >
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="date">
+              <i class="fas fa-calendar"></i
+              ><span data-en="5-6 Months (2022)" data-ar="5–6 أشهر (2022)"
+                >5-6 Months (2022)</span
+              >
+            </div>
+            <h4 data-en="Laboratory Specialist" data-ar="أخصائية مختبر">
+              Laboratory Specialist
+            </h4>
+            <h5
+              data-en="International Organization for Migration (IOM)"
+              data-ar="المنظمة الدولية للهجرة (IOM)"
+            >
+              International Organization for Migration (IOM)
+            </h5>
+            <p
+              data-en="Performed laboratory tests at the health center. Participated in vaccination campaigns and malaria awareness programs."
+              data-ar="فحوصات مخبرية داخل المركز الصحي. المشاركة في حملات التطعيم والتوعية بمرض الملاريا."
+            >
+              Performed laboratory tests at the health center. Participated in
+              vaccination campaigns and malaria awareness programs.
+            </p>
+            <small
+              ><i class="fas fa-location-dot me-1"></i
+              ><span data-en="Al-Mutaynah District" data-ar="مديرية المتينة"
+                >Al-Mutaynah District</span
+              ></small
+            >
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="date">
+              <i class="fas fa-calendar"></i
+              ><span data-en="3 Years" data-ar="3 سنوات">3 Years</span>
+            </div>
+            <h4 data-en="Laboratory Specialist" data-ar="أخصائية مختبر">
+              Laboratory Specialist
+            </h4>
+            <h5 data-en="Al-Sabaa Health Center" data-ar="مركز السبعة الصحي">
+              Al-Sabaa Health Center
+            </h5>
+            <p
+              data-en="Conducted laboratory tests, performed equipment maintenance, managed inventory, and supervised daily quality assurance processes."
+              data-ar="إجراء الفحوصات المخبرية، صيانة الأجهزة، تنظيم المخزون، والإشراف على الجودة اليومية."
+            >
+              Conducted laboratory tests, performed equipment maintenance,
+              managed inventory, and supervised daily quality assurance
+              processes.
+            </p>
+            <small
+              ><i class="fas fa-location-dot me-1"></i
+              ><span data-en="Hays District" data-ar="مديرية حيس"
+                >Hays District</span
+              ></small
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section section-alt" id="education">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <div class="section-label">
+            <i class="fas fa-graduation-cap"></i
+            ><span data-en="Education" data-ar="التعليم">Education</span>
+          </div>
+          <h2
+            class="section-title"
+            data-en="Academic <span>Background</span>"
+            data-ar="الخلفية <span>الاكاديمية</span>"
+          >
+            Academic <span>Background</span>
+          </h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-7 reveal">
+            <div class="edu-card h-100">
+              <div class="icon-big"><i class="fas fa-graduation-cap"></i></div>
+              <h4
+                data-en="Bachelor's Degree in Medical Laboratory Sciences"
+                data-ar="بكالوريوس مختبرات طبية"
+              >
+                Bachelor's Degree in Medical Laboratory Sciences
+              </h4>
+              <h5
+                data-en="Al-Razi University — Sana'a"
+                data-ar="جامعة الرازي — صنعاء"
+              >
+                Al-Razi University — Sana'a
+              </h5>
+              <p data-en="Graduated 2019/2020" data-ar="تخرجت 2019/2020">
+                Graduated 2019/2020
+              </p>
+              <div class="edu-grade">
+                <i class="fas fa-star"></i
+                ><span data-en="Grade: Very Good" data-ar="التقدير: جيد جداً"
+                  >Grade: Very Good</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 reveal reveal-delay-1">
+            <div class="h-100 d-flex flex-column gap-4">
+              <div class="cert-card">
+                <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                <div>
+                  <h5
+                    data-en="English Language Course"
+                    data-ar="دورة اللغة الإنجليزية"
+                  >
+                    English Language Course
+                  </h5>
+                  <p
+                    data-en="Al-Kindi Center — Sana'a | 8 months"
+                    data-ar="مركز الكندي — صنعاء | 8 أشهر"
+                  >
+                    Al-Kindi Center — Sana'a | 8 months
+                  </p>
+                </div>
+              </div>
+              <div class="cert-card">
+                <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                <div>
+                  <h5 data-en="Computer Course" data-ar="دورة الحاسوب">
+                    Computer Course
+                  </h5>
+                  <p
+                    data-en="Al-Kindi Center — Sana'a | 8 days"
+                    data-ar="مركز الكندي — صنعاء | 8 أيام"
+                  >
+                    Al-Kindi Center — Sana'a | 8 days
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section class="section" id="certificates">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <div class="section-label">
+            <i class="fas fa-award"></i
+            ><span data-en="Certificates" data-ar="الشهادات">Certificates</span>
+          </div>
+          <h2
+            class="section-title"
+            data-en="Professional <span>Certifications</span>"
+            data-ar="الشهادات <span>المهنية</span>"
+          >
+            Professional <span>Certifications</span>
+          </h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4 reveal reveal-delay-1">
+            <div
+              class="cert-card h-100 flex-column text-center align-items-center"
+            >
+              <div
+                class="cert-icon"
+                style="width: 70px; height: 70px; border-radius: 20px"
+              >
+                <i class="fas fa-flask" style="font-size: 1.5rem"></i>
+              </div>
+              <h5 data-en="Central Laboratory" data-ar="المختبر المركزي">
+                Central Laboratory
+              </h5>
+              <p
+                data-en="All Departments — Sana'a<br/>2019/2020 (3 months)"
+                data-ar="جميع الأقسام — صنعاء<br/>2019/2020 (مدة 3 أشهر)"
+              >
+                All Departments — Sana'a<br />2019/2020 (3 months)
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 reveal reveal-delay-2">
+            <div
+              class="cert-card h-100 flex-column text-center align-items-center"
+            >
+              <div
+                class="cert-icon"
+                style="width: 70px; height: 70px; border-radius: 20px"
+              >
+                <i class="fas fa-hospital" style="font-size: 1.5rem"></i>
+              </div>
+              <h5
+                data-en="University of Science & Technology Hospital"
+                data-ar="مستشفى جامعة العلوم والتكنولوجيا"
+              >
+                University of Science &amp; Technology Hospital
+              </h5>
+              <p
+                data-en="Laboratory — Sana'a<br/>2019/2020"
+                data-ar="المختبر — صنعاء<br/>2019/2020"
+              >
+                Laboratory — Sana'a<br />2019/2020
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 reveal reveal-delay-3">
+            <div
+              class="cert-card h-100 flex-column text-center align-items-center"
+            >
+              <div
+                class="cert-icon"
+                style="width: 70px; height: 70px; border-radius: 20px"
+              >
+                <i class="fas fa-house-medical" style="font-size: 1.5rem"></i>
+              </div>
+              <h5 data-en="Hays Rural Hospital" data-ar="مستشفى حيس الريفي">
+                Hays Rural Hospital
+              </h5>
+              <p
+                data-en="Laboratory — Al Hodeidah<br/>2021 (6 months)"
+                data-ar="المختبر — الحديدة<br/>2021 (مدة 6 أشهر)"
+              >
+                Laboratory — Al Hodeidah<br />2021 (6 months)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <div class="section-label">
+            <i class="fas fa-paper-plane"></i
+            ><span data-en="Get in Touch" data-ar="تواصل معي"
+              >Get in Touch</span
+            >
+          </div>
+          <h2
+            class="section-title"
+            data-en="Let's <span>Connect</span>"
+            data-ar="دعنا <span>نتواصل</span>"
+          >
+            Let's <span>Connect</span>
+          </h2>
+          <p
+            class="section-desc mx-auto"
+            data-en="Feel free to reach out for opportunities, collaborations, or just to say hello!"
+            data-ar="لا تتردد في التواصل للفرص أو التعاون أو حتى لمجرد التعارف!"
+          >
+            Feel free to reach out for opportunities, collaborations, or just to
+            say hello!
+          </p>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-4 col-6 reveal reveal-delay-1">
+            <div class="contact-card h-100">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <h5 data-en="Phone" data-ar="الهاتف">Phone</h5>
+              <p dir="ltr">774096211</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-6 reveal reveal-delay-2">
+            <div class="contact-card h-100">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <h5>Email</h5>
+              <p>mona1996eb@gmail.com</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-6 reveal reveal-delay-3">
+            <div class="contact-card h-100">
+              <div class="contact-icon">
+                <i class="fas fa-location-dot"></i>
+              </div>
+              <h5 data-en="Location" data-ar="الموقع">Location</h5>
+              <p data-en="Al Hodeidah, Yemen" data-ar="الحديدة، اليمن">
+                Al Hodeidah, Yemen
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="text-center mt-5 reveal"
+          style="
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+          "
+        >
+          <a class="btn-download" href="arabic cv english.html" download
+            ><i class="fas fa-download"></i
+            ><span
+              data-en="Download English Resume"
+              data-ar="تحميل السيرة بالإنجليزية"
+              >View English Resume</span
+            ></a
+          >
+          <a class="btn-download btn-gold" href="arabic cv.html" download
+            ><i class="fas fa-download"></i
+            ><span
+              data-en="Download Arabic Resume"
+              data-ar="تحميل السيرة بالعربية"
+              >View Arabic Resume</span
+            ></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-links">
+          <a href="mailto:mona1996eb@gmail.com"
+            ><i class="fas fa-envelope"></i
+          ></a>
+          <a href="https://wa.me/967774096211" target="_blank"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+        </div>
+        <p
+          data-en="&copy; 2025 Mona Ibrahim. All rights reserved."
+          data-ar="&copy; 2025 منى إبراهيم. جميع الحقوق محفوظة."
+        >
+          &copy; 2025 Mona Ibrahim. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <button
+      class="scroll-top"
+      id="scrollTop"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <div class="toast-msg" id="toast"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      let currentLang = "en";
+      let currentTheme = localStorage.getItem("theme") || "light";
+
+      function applyTheme(t) {
+        document.documentElement.setAttribute("data-theme", t);
+        const icon = document.getElementById("themeIcon");
+        icon.className = t === "dark" ? "fas fa-sun" : "fas fa-moon";
+        localStorage.setItem("theme", t);
+      }
+      applyTheme(currentTheme);
+
+      function toggleTheme() {
+        currentTheme = currentTheme === "light" ? "dark" : "light";
+        applyTheme(currentTheme);
+        showToast(currentTheme === "dark" ? "Dark Mode" : "Light Mode");
+      }
+
+      function toggleLang() {
+        currentLang = currentLang === "en" ? "ar" : "en";
+        document.documentElement.lang = currentLang;
+        document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+        document.getElementById("langLabel").textContent =
+          currentLang === "en" ? "عربي" : "English";
+        document.querySelectorAll("[data-en]").forEach((el) => {
+          el.innerHTML = el.getAttribute("data-" + currentLang);
+        });
+        showToast(currentLang === "ar" ? "العربية" : "English");
+      }
+
+      function showToast(msg) {
+        const t = document.getElementById("toast");
+        t.textContent = msg;
+        t.classList.add("show");
+        setTimeout(() => t.classList.remove("show"), 2000);
+      }
+
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", function () {
+          document
+            .querySelectorAll(".nav-link")
+            .forEach((l) => l.classList.remove("active"));
+          this.classList.add("active");
+          const c = document.getElementById("navContent");
+          const inst = bootstrap.Collapse.getInstance(c);
+          if (inst && window.innerWidth < 992) inst.hide();
+        });
+      });
+
+      window.addEventListener("scroll", () => {
+        const nav = document.getElementById("mainNav");
+        const btn = document.getElementById("scrollTop");
+        nav.classList.toggle("scrolled", window.scrollY > 50);
+        btn.classList.toggle("show", window.scrollY > 400);
+        const sections = document.querySelectorAll("section[id]");
+        let current = "";
+        sections.forEach((s) => {
+          const top = s.offsetTop - 150;
+          if (window.scrollY >= top) current = s.getAttribute("id");
+        });
+        document.querySelectorAll(".nav-link").forEach((l) => {
+          l.classList.remove("active");
+          if (l.getAttribute("href") === "#" + current)
+            l.classList.add("active");
+        });
+      });
+
+      const revealEls = document.querySelectorAll(".reveal");
+      const revealObs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("active");
+              revealObs.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.15 },
+      );
+      revealEls.forEach((el) => revealObs.observe(el));
+
+      const particleContainer = document.getElementById("particles");
+      const colors = ["#0d9488", "#06b6d4", "#5eead4", "#f59e0b"];
+      for (let i = 0; i < 30; i++) {
+        const p = document.createElement("div");
+        p.className = "particle";
+        const size = Math.random() * 8 + 3;
+        p.style.width = size + "px";
+        p.style.height = size + "px";
+        p.style.left = Math.random() * 100 + "%";
+        p.style.backgroundColor =
+          colors[Math.floor(Math.random() * colors.length)];
+        p.style.animationDuration = Math.random() * 15 + 10 + "s";
+        p.style.animationDelay = Math.random() * 10 + "s";
+        particleContainer.appendChild(p);
+      }
+    </script>
+  </body>
+</html>

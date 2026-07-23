@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mona Ibrahim Hussein Abdah Hamna CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap");
+
+      body {
+        font-family: "Tajawal", sans-serif;
+        background-color: #f3f4f6;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        margin: 0;
+      }
+
+      .cv-container {
+        width: 850px;
+        min-height: 1100px;
+        background-color: white;
+        display: flex;
+        box-shadow:
+          0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      /* Sidebar (left) */
+      .sidebar {
+        width: 25%;
+        background-color: #0d125e;
+        color: white;
+        padding: 30px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .profile-pic-container {
+        width: 120px;
+        height: 150px;
+        border: 2px solid rgba(255, 255, 255, 0.7);
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+        position: relative;
+      }
+
+      .profile-pic-container::before,
+      .profile-pic-container::after {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border: 3px solid #db9924;
+        border-radius: 4px;
+      }
+      .profile-pic-container::before {
+        top: -10px;
+        left: -10px;
+        border-bottom: none;
+        border-right: none;
+        border-radius: 10px 0 0 0;
+      }
+      .profile-pic-container::after {
+        bottom: -10px;
+        right: -10px;
+        border-top: none;
+        border-left: none;
+        border-radius: 0 0 10px 0;
+      }
+
+      .profile-pic {
+        width: 90px;
+        height: 90px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #0b1066;
+        font-weight: bold;
+        font-size: 20px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5) inset;
+      }
+
+      .sidebar-section {
+        width: 85%;
+        margin-bottom: 25px;
+        text-align: left;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 15px;
+      }
+
+      .sidebar-section:first-of-type {
+        border-top: none;
+      }
+
+      .sidebar-title {
+        font-size: 1.2rem;
+        font-weight: 800;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+
+      .contact-info {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 12px;
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+
+      .contact-icon {
+        background-color: white;
+        color: #0d125e;
+        width: 22px;
+        height: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        margin-right: 12px;
+        font-size: 0.8rem;
+        flex-shrink: 0;
+      }
+
+      .contact-text {
+        text-align: left;
+        line-height: 1.4;
+      }
+
+      .skill-bar-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .skill-name {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      .skill-bar {
+        display: flex;
+        gap: 4px;
+      }
+
+      .skill-level {
+        width: 18px;
+        height: 8px;
+        background-color: #db9924;
+      }
+      .skill-level-empty {
+        width: 18px;
+        height: 8px;
+        background-color: rgba(255, 255, 255, 0.35);
+      }
+
+      .hobbies-list {
+        list-style: none;
+        padding: 0;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-align: center;
+        line-height: 2;
+      }
+
+      .email-list {
+        list-style: none;
+        padding: 0;
+        font-size: 0.8rem;
+        text-align: center;
+        line-height: 1.5;
+        word-break: break-all;
+      }
+
+      /* Content (right) */
+      .content {
+        width: 75%;
+        background-color: white;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header-name {
+        background-color: #0d125e;
+        color: white;
+        padding: 15px 30px;
+        font-size: 1.4rem;
+        font-weight: 800;
+        margin-bottom: 25px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .section {
+        margin-bottom: 15px;
+        padding: 0 15px 0 25px;
+        margin-left: 5px;
+      }
+
+      .section-header {
+        background-color: #0d125e;
+        color: white;
+        padding: 4px 10px 4px 45px;
+        font-size: 1.1rem;
+        font-weight: 800;
+        position: relative;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        height: 35px;
+        margin-left: -15px;
+        border-radius: 15px 0;
+      }
+
+      .section-icon-circle {
+        position: absolute;
+        left: 0px;
+        width: 35px;
+        height: 35px;
+        background-color: #0d125e;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 4px solid white;
+        z-index: 10;
+      }
+
+      .inner-yellow-circle {
+        width: 16px;
+        height: 16px;
+        background-color: #db9924;
+        border-radius: 50%;
+      }
+
+      .graduation-icon {
+        color: #db9924;
+        font-size: 1rem;
+      }
+
+      .section-content {
+        padding-left: 25px;
+        font-size: 0.95rem;
+        color: #000;
+        font-weight: 500;
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 30px;
+      }
+      .info-grid div {
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+      }
+      .info-label {
+        font-weight: 800;
+      }
+
+      .education-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+      }
+      .education-label {
+        font-weight: 800;
+      }
+
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+      .data-table td {
+        padding: 5px 0;
+        vertical-align: top;
+      }
+
+      .list-item-td {
+        display: flex;
+        align-items: flex-start;
+      }
+      .list-icon {
+        font-size: 0.7rem;
+        margin-right: 8px;
+        margin-top: 5px;
+        color: #0d125e;
+      }
+      .bullet-icon {
+        font-size: 0.6rem;
+        margin-right: 8px;
+        margin-top: 8px;
+        color: #0d125e;
+      }
+
+      .strong-text {
+        font-weight: 800;
+      }
+
+      .skill-tag {
+        display: inline-block;
+        background: #f0f2f8;
+        color: #0b1250;
+        padding: 2px 14px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        margin: 0 4px 6px 0;
+        border: 1px solid #dce0ec;
+      }
+
+      .soft-tag {
+        background: #e6e9f5;
+        color: #0b1250;
+        border-color: #bcc4e0;
+      }
+
+      .profile_image {
+        width: 130px;
+        height: 130px;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cv-container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="profile-pic-container">
+          <div class="profile-pic">
+            <!-- <span style="font-size: 14px; text-align: center">1/1</span> -->
+            <img
+              src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.RRjdmY0Fq3KEYQ19Y8UyVAHaE5%3Fr%3D0%26pid%3DApi&sp=1784840871Tf573444e154f0da8bf4c5657a2dc11b5a433822201d59023535228332aee6914"
+              alt="Profile Image"
+              class="profile_image"
+            />
+          </div>
+        </div>
+
+        <div class="sidebar-section" style="border-top: none">
+          <div class="contact-info">
+            <div class="contact-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <span class="contact-text">Al Hodeidah</span>
+          </div>
+          <div class="contact-info">
+            <div class="contact-icon">
+              <i class="fa-solid fa-phone-flip"></i>
+            </div>
+            <span class="contact-text" dir="ltr">774096211</span>
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-title">Languages</div>
+
+          <div class="skill-bar-container">
+            <div class="skill-name">Arabic</div>
+            <div class="skill-bar">
+              <div class="skill-level"></div>
+              <div class="skill-level"></div>
+              <div class="skill-level"></div>
+              <div class="skill-level"></div>
+              <div class="skill-level"></div>
+              <div class="skill-level"></div>
+            </div>
+          </div>
+
+          <div class="skill-bar-container">
+            <div class="skill-name">English</div>
+            <div class="skill-bar">
+              <div class="skill-level"></div>
+              <div class="skill-level"></div>
+              <div class="skill-level"></div>
+              <div class="skill-level-empty"></div>
+              <div class="skill-level-empty"></div>
+              <div class="skill-level-empty"></div>
+            </div>
+            <div style="font-size: 0.7rem; opacity: 0.7; margin-top: 2px">
+              Intermediate level
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-title">Hobbies</div>
+          <ul class="hobbies-list">
+            <li>Keeping up with everything new</li>
+            <li>Developing myself academically and practically</li>
+          </ul>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-title">Email</div>
+          <ul class="email-list">
+            <li>mona1996eb@gmail.com</li>
+            <li>manoosh774096@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <div class="header-name">Mona Ibrahim Hussein Abdah Hamna</div>
+
+        <!-- Personal Information -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon-circle">
+              <div class="inner-yellow-circle"></div>
+            </div>
+            Personal Information
+          </div>
+          <div class="section-content info-grid">
+            <div>
+              <span class="info-label">Nationality:</span><span>Yemeni</span>
+            </div>
+            <div>
+              <span class="info-label">Gender:</span><span>Female</span>
+            </div>
+            <div>
+              <span class="info-label">Date of Birth:</span><span>1996</span>
+            </div>
+            <div>
+              <span class="info-label">Marital Status:</span><span>Single</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon-circle">
+              <div class="inner-yellow-circle"></div>
+            </div>
+            Profile
+          </div>
+          <div
+            class="section-content font-bold text-left"
+            style="padding-left: 40px"
+          >
+            A Medical Laboratory Specialist holding a Bachelor's degree from
+            Al-Razi University, with hands-on field and laboratory experience
+            gained through work with international organizations and hospitals.
+            I have strong proficiency in operating laboratory equipment,
+            precision in conducting tests, and effective communication skills
+            with both the team and patients. I am seeking to join a motivating
+            work environment that allows me to further develop my skills and
+            contribute to delivering outstanding healthcare services.
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon-circle">
+              <i class="fa-solid fa-graduation-cap graduation-icon"></i>
+            </div>
+            Educational Qualification
+          </div>
+          <div class="section-content">
+            <div class="education-row">
+              <span
+                ><span class="education-label">Qualification:</span> Bachelor's
+                Degree in Medical Laboratory Sciences</span
+              >
+              <span
+                ><span class="education-label">University:</span> Al-Razi
+                University - Sana'a</span
+              >
+            </div>
+            <div class="education-row">
+              <span
+                ><span class="education-label">Graduation Date:</span>
+                2019/2020</span
+              >
+              <span><span class="education-label">Grade:</span> Very Good</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Work Experience -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon-circle">
+              <div class="inner-yellow-circle"></div>
+            </div>
+            Work Experience
+          </div>
+          <div class="section-content">
+            <table class="data-table">
+              <tr>
+                <td width="100%" class="list-item-td">
+                  <i class="fa-solid fa-check list-icon"></i>
+                  <span class="strong-text"
+                    >Laboratory Specialist - Al-Rahma Dispensary, affiliated
+                    with Tawasul (Kuwait)</span
+                  >
+                </td>
+                <td width="35%">
+                  <span class="strong-text">Location:</span> Al-Khokha
+                </td>
+              </tr>
+              <tr>
+                <td class="list-item-td">
+                  <i class="fa-solid fa-check list-icon"></i>
+                  <span class="strong-text"
+                    >Laboratory Specialist - International Organization for
+                    Migration (IOM)</span
+                  >
+                </td>
+                <td>
+                  <span class="strong-text">Location:</span> Al-Mutaynah
+                  District
+                </td>
+              </tr>
+              <tr>
+                <td class="list-item-td">
+                  <i class="fa-solid fa-check list-icon"></i>
+                  <span class="strong-text"
+                    >Laboratory Specialist - Al-Sabaa Health Center</span
+                  >
+                </td>
+                <td>
+                  <span class="strong-text">Location:</span> Hays District
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon-circle">
+              <div class="inner-yellow-circle"></div>
+            </div>
+            Technical Skills
+          </div>
+          <div class="section-content" style="padding-left: 22px">
+            <div
+              style="
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px 8px;
+                margin-bottom: 4px;
+              "
+            >
+              <span class="skill-tag">Blood Tests</span>
+              <span class="skill-tag">Clinical Chemistry</span>
+              <span class="skill-tag">Microbiology</span>
+              <span class="skill-tag">Immunology</span>
+              <span class="skill-tag">Sample Collection</span>
+              <span class="skill-tag">Quality Control</span>
+              <span class="skill-tag">Equipment Maintenance</span>
+              <span class="skill-tag">Laboratory Documentation</span>
+              <span class="skill-tag">Working Under Pressure</span>
+              <span class="skill-tag">Patient Communication</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Personal Attributes (Soft Skills) -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon-circle">
+              <div class="inner-yellow-circle"></div>
+            </div>
+            Personal Attributes
+          </div>
+          <div class="section-content" style="padding-left: 22px">
+            <div style="display: flex; flex-wrap: wrap; gap: 6px 8px">
+              <span class="skill-tag soft-tag">Teamwork</span>
+              <span class="skill-tag soft-tag">Quality Improvement</span>
+              <span class="skill-tag soft-tag"
+                >Working with Modern Equipment</span
+              >
+              <span class="skill-tag soft-tag">Precision in Work</span>
+              <span class="skill-tag soft-tag">Communication Skills</span>
+              <span class="skill-tag soft-tag">Working Under Pressure</span>
+              <span class="skill-tag soft-tag">Time Management</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Training Courses -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon-circle">
+              <div class="inner-yellow-circle"></div>
+            </div>
+            Training Courses
+          </div>
+          <div class="section-content">
+            <table class="data-table">
+              <tr>
+                <td class="list-item-td">
+                  <i class="fa-solid fa-circle bullet-icon"></i>
+                  <span class="strong-text">English Language</span>
+                </td>
+                <td width="50%">
+                  <span class="strong-text">Center:</span> Al-Kindi Center -
+                  Sana'a
+                </td>
+                <td width="20%">
+                  <span class="strong-text">Duration:</span> 8 months
+                </td>
+              </tr>
+              <tr>
+                <td class="list-item-td">
+                  <i class="fa-solid fa-circle bullet-icon"></i>
+                  <span class="strong-text">Computer</span>
+                </td>
+                <td width="50%">
+                  <span class="strong-text">Center:</span> Al-Kindi Center -
+                  Sana'a
+                </td>
+                <td><span class="strong-text">Duration:</span> 8 days</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Certificates -->
+        <div class="section">
+          <div class="section-header">
+            <div class="section-icon-circle">
+              <div class="inner-yellow-circle"></div>
+            </div>
+            Certificates
+          </div>
+          <div class="section-content">
+            <table class="data-table" style="width: 100%">
+              <tr>
+                <td width="100%" class="list-item-td">
+                  <i class="fa-solid fa-circle bullet-icon"></i>
+                  <span class="strong-text"
+                    >Training Certificate from the Central Laboratory - All
+                    Departments</span
+                  >
+                  <div
+                    style="
+                      font-size: 0.8rem;
+                      font-weight: 400;
+                      padding-left: 20px;
+                      color: #555;
+                    "
+                  >
+                    Sana'a - 2019/2020 (Duration: 3 months)
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="list-item-td">
+                  <i class="fa-solid fa-circle bullet-icon"></i>
+                  <span class="strong-text"
+                    >Training Certificate from the Laboratory of the University
+                    of Science and Technology Hospital</span
+                  >
+                  <div
+                    style="
+                      font-size: 0.8rem;
+                      font-weight: 400;
+                      padding-left: 20px;
+                      color: #555;
+                    "
+                  >
+                    Sana'a - 2019/2020
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="list-item-td">
+                  <i class="fa-solid fa-circle bullet-icon"></i>
+                  <span class="strong-text"
+                    >Training Certificate from Hays Rural Hospital
+                    Laboratory</span
+                  >
+                  <div
+                    style="
+                      font-size: 0.8rem;
+                      font-weight: 400;
+                      padding-left: 20px;
+                      color: #555;
+                    "
+                  >
+                    Al Hodeidah - Hays - 2021 (Duration: 6 months)
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
