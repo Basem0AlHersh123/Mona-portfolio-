@@ -144,10 +144,13 @@
       .nav-link {
         color: rgba(255, 255, 255, 0.7) !important;
         font-weight: 500;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         transition: var(--transition);
-        padding: 8px 14px !important;
+        padding: 8px 12px !important;
         border-radius: 10px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
       }
       .nav-link:hover,
       .nav-link.active {
@@ -212,6 +215,33 @@
       }
       .btn-download:hover i {
         transform: translateY(3px);
+      }
+      .btn-view {
+        background: transparent;
+        color: var(--primary);
+        border: 2px solid var(--primary) !important;
+        padding: 12px 28px;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: var(--transition);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: none;
+      }
+      .btn-view:hover {
+        background: var(--primary);
+        color: #fff;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(13, 148, 136, 0.5);
+      }
+      .btn-view i {
+        transition: transform 0.3s ease;
+      }
+      .btn-view:hover i {
+        transform: rotate(15deg);
       }
       .btn-outline-download {
         background: rgba(255, 255, 255, 0.08);
@@ -1106,50 +1136,50 @@
               <a
                 class="nav-link active"
                 href="#hero"
-                data-en="Home"
-                data-ar="الرئيسية"
-                >Home</a
+                data-en='<i class="fas fa-house"></i> Home'
+                data-ar='<i class="fas fa-house"></i> الرئيسية'
+                ><i class="fas fa-house"></i> Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about" data-en="About" data-ar="عنّي"
-                >About</a
+              <a class="nav-link" href="#about" data-en='<i class="fas fa-user"></i> About' data-ar='<i class="fas fa-user"></i> عنّي'
+                ><i class="fas fa-user"></i> About</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link"
                 href="#skills"
-                data-en="Skills"
-                data-ar="المهارات"
-                >Skills</a
+                data-en='<i class="fas fa-star"></i> Skills'
+                data-ar='<i class="fas fa-star"></i> المهارات'
+                ><i class="fas fa-star"></i> Skills</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link"
                 href="#experience"
-                data-en="Experience"
-                data-ar="الخبرات"
-                >Experience</a
+                data-en='<i class="fas fa-briefcase"></i> Experience'
+                data-ar='<i class="fas fa-briefcase"></i> الخبرات'
+                ><i class="fas fa-briefcase"></i> Experience</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link"
                 href="#education"
-                data-en="Education"
-                data-ar="التعليم"
-                >Education</a
+                data-en='<i class="fas fa-graduation-cap"></i> Education'
+                data-ar='<i class="fas fa-graduation-cap"></i> التعليم'
+                ><i class="fas fa-graduation-cap"></i> Education</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link"
                 href="#contact"
-                data-en="Contact"
-                data-ar="تواصل"
-                >Contact</a
+                data-en='<i class="fas fa-envelope"></i> Contact'
+                data-ar='<i class="fas fa-envelope"></i> تواصل'
+                ><i class="fas fa-envelope"></i> Contact</a
               >
             </li>
           </ul>
@@ -1887,6 +1917,18 @@
             flex-wrap: wrap;
           "
         >
+<<<<<<< HEAD
+          <a class="btn-view" href="english cv.png" target="_blank"
+            ><i class="fas fa-globe"></i
+            ><span data-en="View English Resume" data-ar="عرض بالإنجليزية"
+              >View English Resume</span
+            ></a
+          >
+
+          <a class="btn-view btn-gold" href="arabic cv.png" target="_blank"
+            ><i class="fas fa-globe"></i
+            ><span data-en="View Arabic Resume" data-ar="عرض بالعربية"
+=======
           <a class="btn-download" href="arabic cv english.html" 
             ><i class="fas fa-download"></i
             ><span
@@ -1900,6 +1942,7 @@
             ><span
               data-en="Download Arabic Resume"
               data-ar="تحميل السيرة بالعربية"
+>>>>>>> 32bd1c144460294a7afa9b10c483ef7201b372f9
               >View Arabic Resume</span
             ></a
           >
